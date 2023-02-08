@@ -1,0 +1,9 @@
+<Project> 
+  <!-- Automatically supply project capabilities for IDE use -->
+  <ItemGroup>
+    <ProjectCapability Include="Android" />
+    <ProjectCapability Include="Mobile" />
+    <ProjectCapability Include="AndroidApplication" />
+    <ProjectCapability Condition="'$(_KeepLaunchProfiles)' != 'true'" Remove="LaunchProfiles" />
+  </ItemGroup>
+</Project>

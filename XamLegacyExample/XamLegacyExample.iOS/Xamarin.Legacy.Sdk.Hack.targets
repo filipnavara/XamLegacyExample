@@ -1,0 +1,29 @@
+<Project>
+  <!-- Automatically supply project capabilities for IDE use -->
+  <ItemGroup>
+    <ProjectCapability Include="Apple" />
+    <ProjectCapability Include="Mobile" />
+    <ProjectCapability Include="IOSApplication" />
+    <ProjectCapability Condition="'$(_KeepLaunchProfiles)' != 'true'" Remove="LaunchProfiles" />
+  </ItemGroup>
+
+  <!-- Set the default RuntimeIdentifier if not already specified. -->
+  <PropertyGroup Condition="'$(_RuntimeIdentifierIsRequired)' == 'true' And '$(RuntimeIdentifier)' == '' And '$(RuntimeIdentifiers)' == '' ">
+    <!-- The _<platform>RuntimeIdentifier values are set from the IDE -->
+    <RuntimeIdentifier Condition="'$(_PlatformName)' == 'iOS'">$(_iOSRuntimeIdentifier)</RuntimeIdentifier>
+    <RuntimeIdentifier Condition="'$(_PlatformName)' == 'tvOS'">$(_tvOSRuntimeIdentifier)</RuntimeIdentifier>
+    <RuntimeIdentifier Condition="'$(_PlatformName)' == 'macOS'">$(_macOSRuntimeIdentifier)</RuntimeIdentifier>
+    <RuntimeIdentifier Condition="'$(_PlatformName)' == 'MacCatalyst'">$(_MacCatalystRuntimeIdentifier)</RuntimeIdentifier>
+
+    <_XamarinUsingDefaultRuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">true</_XamarinUsingDefaultRuntimeIdentifier>
+
+    <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == '' And '$(_PlatformName)' == 'iOS'">iossimulator-x64</RuntimeIdentifier>
+    <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == '' And '$(_PlatformName)' == 'tvOS'">tvossimulator-x64</RuntimeIdentifier>
+
+    <!-- For release desktop builds we default to universal apps in .NET 7+ -->
+    <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == '' And '$(Configuration)' != 'Release' And '$(_PlatformName)' == 'macOS'">osx-x64</RuntimeIdentifier>
+    <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == '' And '$(Configuration)' != 'Release' And '$(_PlatformName)' == 'MacCatalyst'">maccatalyst-x64</RuntimeIdentifier>
+    <RuntimeIdentifiers Condition="'$(RuntimeIdentifier)' == '' And '$(Configuration)' == 'Release' And '$(_PlatformName)' == 'macOS'">osx-x64;osx-arm64</RuntimeIdentifiers>
+    <RuntimeIdentifiers Condition="'$(RuntimeIdentifier)' == '' And '$(Configuration)' == 'Release' And '$(_PlatformName)' == 'MacCatalyst'">maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers>
+  </PropertyGroup>
+</Project>

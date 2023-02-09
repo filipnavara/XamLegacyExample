@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1705.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamLegacyExample.Android", "XamLegacyExample\XamLegacyExample.Android\XamLegacyExample.Android.csproj", "{96B34E29-F248-42D2-BE78-84E994A06040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamLegacyExample.Android", "XamLegacyExample\XamLegacyExample.Android\XamLegacyExample.Android.csproj", "{96B34E29-F248-42D2-BE78-84E994A06040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamLegacyExample.iOS", "XamLegacyExample\XamLegacyExample.iOS\XamLegacyExample.iOS.csproj", "{481A90DF-1C2D-4AAD-8EF1-9D05A80653AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamLegacyExample.iOS", "XamLegacyExample\XamLegacyExample.iOS\XamLegacyExample.iOS.csproj", "{481A90DF-1C2D-4AAD-8EF1-9D05A80653AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamLegacyExample", "XamLegacyExample\XamLegacyExample\XamLegacyExample.csproj", "{C000AA8C-68B1-43F7-BBFE-C5CFD7432633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamLegacyExample", "XamLegacyExample\XamLegacyExample\XamLegacyExample.csproj", "{C000AA8C-68B1-43F7-BBFE-C5CFD7432633}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,12 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{96B34E29-F248-42D2-BE78-84E994A06040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96B34E29-F248-42D2-BE78-84E994A06040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B34E29-F248-42D2-BE78-84E994A06040}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{96B34E29-F248-42D2-BE78-84E994A06040}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96B34E29-F248-42D2-BE78-84E994A06040}.Release|Any CPU.Build.0 = Release|Any CPU
 		{481A90DF-1C2D-4AAD-8EF1-9D05A80653AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{481A90DF-1C2D-4AAD-8EF1-9D05A80653AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{481A90DF-1C2D-4AAD-8EF1-9D05A80653AA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{481A90DF-1C2D-4AAD-8EF1-9D05A80653AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{481A90DF-1C2D-4AAD-8EF1-9D05A80653AA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C000AA8C-68B1-43F7-BBFE-C5CFD7432633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
